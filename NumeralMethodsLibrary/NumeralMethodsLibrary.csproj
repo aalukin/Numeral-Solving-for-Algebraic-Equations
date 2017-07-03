@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58001EBA-B290-42A3-A03B-AF6BFF76BC97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NumeralMethodsLibrary</RootNamespace>
+    <AssemblyName>NumeralMethodsLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChordMethod.cs" />
+    <Compile Include="CombinedMethod.cs" />
+    <Compile Include="Derivative.cs" />
+    <Compile Include="BisectionMethod.cs" />
+    <Compile Include="DiscontinuityException.cs" />
+    <Compile Include="FakeRoot.cs" />
+    <Compile Include="FirstDirevativeException.cs" />
+    <Compile Include="GoldenSectrionMethod.cs" />
+    <Compile Include="MethodIsNotAplicableException.cs" />
+    <Compile Include="ModifiedNewton%27sMethod.cs" />
+    <Compile Include="Newton%27sMethod.cs" />
+    <Compile Include="NumeralMethod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ridder%27sMethod.cs" />
+    <Compile Include="Root.cs" />
+    <Compile Include="SecantMethod.cs" />
+    <Compile Include="Solving.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PolishNotationLibrary\PolishNotationLibrary.csproj">
+      <Project>{425c3e94-2660-4e5b-a732-fa419f04a604}</Project>
+      <Name>PolishNotationLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SolvingReportLibrary\SolvingReportLibrary.csproj">
+      <Project>{22c5dafb-5fe9-4cce-8a6f-6df23c12fb20}</Project>
+      <Name>SolvingReportLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
